@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
+    <style>
+        p {
+            border: 3px solid red;
+            height: 15px;
+            width: 100px;
+            padding: 20px;
+        }
+        
+        input[type="button"] {
+            
+            font-size: 25px;
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p></p>
+    <input type="button" onclick="launch()" value="啟動">
+    
+    <script>
+        function launch() {
+            d3.select('p').text(random(1, 1000));
+        }
+
+        function random(n, m) {
+            return Math.ceil(Math.random() * (m - n) + n);
+        }
+    </script>
+</body>
+</html>
